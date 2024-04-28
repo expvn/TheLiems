@@ -31,7 +31,7 @@ public class GameManager : MonoBehaviour
     {
         Application.targetFrameRate = 60;
 
-        NewGame();
+      //  NewGame();
     }
 
     public void NewGame()
@@ -46,7 +46,7 @@ public class GameManager : MonoBehaviour
     {
         // TODO: show game over screen
 
-        NewGame();
+      //  NewGame();
     }
 
     public void LoadLevel(int world, int stage)
