@@ -16,6 +16,7 @@ public class Boss1 : MonoBehaviour
         animator = GetComponent<Animator>();
         rb= gameObject.GetComponent<Rigidbody2D>();
         col = col.GetComponent<Collider2D>();
+        col.isTrigger = true;
       
     }
 
@@ -31,6 +32,14 @@ public class Boss1 : MonoBehaviour
     {
         if (other.CompareTag("cuoimap")){
              col.isTrigger=false;
+            speed = -100f;
+            Destroy(gameObject, 5f);
+        }
+    }
+    private void OnCollisionEnter2D(Collision2D collision)
+    {
+        if (collision.gameObject.tag == "cuoimap")
+        {
             speed = -100f;
             Destroy(gameObject, 5f);
         }

@@ -13,4 +13,12 @@ public class die : MonoBehaviour
             player.Hit();
         }
     }
+    private void OnTriggerEnter2D(Collider2D other)
+    {
+        if (other.tag == "enemy")
+        {
+            player.Hit();
+
+        }
+    }
 }
